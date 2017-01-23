@@ -1,8 +1,16 @@
 import {Component} from 'angular2/core';
+import {Config} from './config.service';
+
 
 @Component({
     selector: 'my-app',
-    template: '<h1>Angular 2 Template</h1>'
+    templateUrl: 'app/html/app.component.html';
+
+
+
 })
 
-export class AppComponent {}
+export class AppComponent {
+	heading = Config.myHeading;
+	subHeading = Config.mySubHeading;
+}
